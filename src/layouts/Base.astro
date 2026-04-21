@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Blog de Oumorou Zibo — Infra, DevOps, automatisation et tech." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container--wide">
+        <div class="site-header__inner">
+          <a href="/" class="site-header__logo">oz<span>.</span>blog</a>
+          <nav class="site-header__nav">
+            <a href="/">Articles</a>
+            <a href="https://oumorouzibo.me" target="_blank">Portfolio →</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container--wide">
+        <div class="site-footer__inner">
+          <span class="site-footer__copy">© {new Date().getFullYear()} Oumorou Zibo</span>
+          <div class="site-footer__links">
+            <a href="https://github.com/oumorouzibo" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/oumorouzibo" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
