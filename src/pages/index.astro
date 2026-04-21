@@ -14,9 +14,10 @@ function formatDate(date) {
 <Base title="oz.blog — Oumorou Zibo">
   <div class="container">
     <section class="hero">
-      <p class="hero__label">Journal technique</p>
-      <h1 class="hero__title">Infra, code,<br /><em>et ce qui m'apprend</em></h1>
-      <p class="hero__desc">Notes sur l'infrastructure, l'automatisation, DevOps et les systèmes. Écrit par Oumorou Zibo depuis Arles.</p>
+      <p class="hero__label">Blog · Arles</p>
+      <h1 class="hero__title">Oumorou Zibo</h1>
+      <p class="hero__tagline"><em>Notes sur ce qui m'apprend quelque chose.</em></p>
+      <p class="hero__desc">Infra, code, lectures, réflexions — un journal personnel sans frontières de sujets.</p>
     </section>
 
     <section class="articles">
@@ -36,7 +37,7 @@ function formatDate(date) {
                   <h2 class="article-item__title">{post.data.title}</h2>
                   <p class="article-item__desc">{post.data.description}</p>
                 </div>
-                {post.data.tags.length > 0 && (
+                {post.data.tags && post.data.tags.length > 0 && (
                   <div class="article-item__tags">
                     {post.data.tags.map(tag => (
                       <span class="tag">{tag}</span>

@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import LikeButton from '../components/LikeButton.astro';
+import Comments from '../components/Comments.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -31,6 +33,8 @@ function formatDate(date) {
       <div class="prose">
         <Content />
       </div>
+      <LikeButton slug={post.slug} />
+      <Comments />
     </article>
   </div>
 </Base>
