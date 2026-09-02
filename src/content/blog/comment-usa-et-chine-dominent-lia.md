@@ -1,7 +1,7 @@
 ---
 title: "Comment les États-Unis et la Chine dominent l'IA"
 description: "Comment les États-Unis et la Chine construisent deux stratégies opposées pour dominer l'IA mondiale"
-pubDate: 2026-09-02
+date: 2026-09-02
 ---
 
 La compétition entre les États-Unis et la Chine autour de l'intelligence artificielle n'est pas simplement une course à la performance des modèles. C'est une bataille pour définir l'architecture technologique du monde dans les années à venir.
